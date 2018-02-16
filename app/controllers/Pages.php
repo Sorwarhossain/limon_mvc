@@ -4,14 +4,20 @@
 */
 class Pages extends Controller{
 	public function __construct(){
-		//echo 'Pages controller loaded';
+
 	}
 
 	public function index(){
-		$this->view('pages/index', ['title' => 'Welcome to MVC Framework']);
+		$data = [
+			'title' => 'Welcome to Limon MVC Framework',
+		];
+		$this->view('pages/index', $data);
 	}
 
 	public function about(){
-		$this->view('pages/about');
+		$data = [
+			'title' => 'This is about page'
+		];
+		$this->view('pages/about', $data);
 	}
 }
